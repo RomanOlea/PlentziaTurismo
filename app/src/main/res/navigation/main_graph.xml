@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/contactoFragment"
+        android:name="com.example.plentziaapp.ui.contacto.ContactoFragment"
+        android:label="fragment_contacto"
+        tools:layout="@layout/fragment_contacto" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.plentziaapp.ui.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/preparaFragment"
+        android:name="com.example.plentziaapp.ui.prepara.PreparaFragment"
+        android:label="fragment_prepara"
+        tools:layout="@layout/fragment_prepara" />
+    <fragment
+        android:id="@+id/queHacerFragment"
+        android:name="com.example.plentziaapp.ui.queHacer.QueHacerFragment"
+        android:label="fragment_que_hacer"
+        tools:layout="@layout/fragment_que_hacer" />
+    <fragment
+        android:id="@+id/queVerFragment"
+        android:name="com.example.plentziaapp.ui.queVer.QueVerFragment"
+        android:label="fragment_que_ver"
+        tools:layout="@layout/fragment_que_ver" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.plentziaapp.ui.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+</navigation>
