@@ -11,7 +11,13 @@
 
     //textos MenuInfo
     <string name="menu_prepara">Prepara tu viaje</string>
-    <string name="menu_prepara_description">Alojamiento, transporte y consejos</string>
+    <string name="menu_prepara_description">Alojamiento, transporte y consejos.</string>
+    <string name="menu_quehacer">Qué hacer</string>
+    <string name="menu_quehacer_description">Actividades, gastronomía y eventos. </string>
+    <string name="menu_quever">Qué ver</string>
+    <string name="menu_quever_description">Monumentos, playas y lugares de interes.</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_contacto_description">Oficina de turismo y teléfonos de interés.</string>
 
 
 

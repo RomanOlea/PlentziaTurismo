@@ -5,12 +5,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.plentziaapp.R
 import com.example.plentziaapp.databinding.ActivityMainBinding
+import com.example.plentziaapp.ui.contacto.ContactoFragment
+import com.example.plentziaapp.ui.prepara.PreparaFragment
+import com.example.plentziaapp.ui.queHacer.QueHacerFragment
+import com.example.plentziaapp.ui.queVer.QueVerFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -48,5 +53,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Función que recibe el ID de fragmento y crea la instancia correspondiente
+    fun showFragment(fragmentId: Int) {
+        val fragment: Fragment = when (fragmentId) {
+            R.id.preparaFragment -> PreparaFragment()
+            R.id.queVerFragment -> QueVerFragment()
+            R.id.queHacerFragment -> QueHacerFragment()
+            R.id.contactoFragment -> ContactoFragment()
+            else -> throw IllegalArgumentException("Fragmento no soportado")
+        }
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fcView, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
 
 }
